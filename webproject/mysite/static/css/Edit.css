@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+*
+{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.logo
+{
+    width :50px;
+    height: 30px;
+    position: absolute;
+    float: left;
+    padding-left: 0%;
+    margin: 1px -85px;
+
+}
+ li,a , button 
+{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18;
+    font-weight: 500;
+    position:sticky;
+    padding: 0px;
+    text-decoration:none;
+    color: black;
+    text-transform: uppercase;
+
+}
+ul,li
+{
+    font-size: 16px;
+    padding: 13px;
+
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #0c5c6e;
+
+    
+}
+
+nav{
+    margin: 0px;
+    width: 60%;
+    height: 45px;
+}
+.Nav
+{
+    display: inline-block;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 12%;
+    top: 25px;
+}
+.Nav a
+{   position: relative;
+  color: #f6f4e6;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.Nav a::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: aquamarine;
+    bottom: -3px;
+    transition: 0.3s;
+}
+.Nav a:hover
+{
+    color: azure;
+}
+.Nav a:hover::before
+{
+    width: 100%;
+}
+.Nav li
+{
+    display:inline-block;
+    padding: 0px 10px;
+    transition: all 0.3 s ease 0s;
+    
+}
+.Nav li a:hover{
+     transition: all 0.3 s ease 0s;
+     color: rgb(23, 188, 75);
+
+
+    }
+.Nav li a:active
+{
+    transition: all 0.3 s ease 0s;
+    color: rgb(46, 5, 140);
+ }
+ 
+ button
+{
+    padding: 0px 10px;
+    background-color: #6d7777b7;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+   
+}
+
+button :hover
+{
+    background-color: rgb(51, 115, 115);
+}
+
+.form
+{
+  background-color: #0c5c6e;
+
+}
+
+.searchBox input
+{
+    padding: 2px 10px;
+    background-color: #535e5e;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+
+
+}
+.deisgn .srh
+{
+    right: 269px;
+    background-color: white;
+}
+ 
+.deisgn .searchBox
+{
+    position:absolute; 
+    top: 26px;
+    right: 150px;
+    width: 300px;
+    height: 28px;
+    display: flex; 
+}
+
+.deisgn .log{ 
+    background-color: #f6f4e6;
+    position: relative; 
+    left: 100px;
+    bottom: 15px;
+    width: 10%;
+    height: 0px;
+    }
+    body
+{
+    background-color: #5f8f8f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-align:left;
+    table-layout: fixed;
+
+}
+form{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea,
+form select {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: hsla;
+	border: none;
+	border-radius: 4px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+    font-size: 18px;
+	box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#000000;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+
+form select{
+	height:45px;
+    font-size: 18px;
+    color: black;
+}
+form input[type="submit"],
+form input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 19px 39px;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+form input[type="submit"]:hover,
+form input[type="button"]:hover
+{
+	background: #109177;
+}
+
+footer
+{
+    
+    width: 30%;
+    display: inline-block;
+    background: #333;
+    height: 20%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+  .endPage 
+{
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 15px 10px;
+}
+  .endPage .endPageleft,
+  .endPage .middile-footer ,
+  .endPage .EndPageRight
+{
+    padding: 10px;
+    display: inline-block;
+	vertical-align: top;
+}
+  .endPage .endPageleft
+{
+    
+    width: 25%;
+    display:inline-block;
+	text-decoration: none;
+	color:  inherit;
+
+  }
+  .endPage  p ,.endPage a
+  {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .endPage .middile-footer
+  {
+    width: 55%;
+	text-align: center;
+	vertical-align: middle;
+
+  }

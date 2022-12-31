@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content  % }
+<form method='POST'>
+    {%csrf_token%}
+    <div>
+        <label for="user"><b>Student name :</b></label>
+        <input type="text" name="name" value="" id="user"  placeholder="">
+
+</div>
+<div>
+    <label for="id"><b>Student ID :</b> </label>
+
+    <input type="number" name="id" value="" id="id" placeholder="" step="1">
+
+</div>
+<div>
+    <input type ="submit" value="save">
+</div>
+{% endblock content   %}

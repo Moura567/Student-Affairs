@@ -1,0 +1,70 @@
+{% load static %}
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="uft-8">
+            <link rel="stylesheet" href="{% static 'css/UpdateStyle.css'%}">
+    <script src="{% static 'js/sstauts.js'%}"></script>
+            <title>Student stauts</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">            
+            </head>
+        {% include 'parts/nav.html' %}
+        <body>
+            <div class="student-table">
+                
+                <table class="t">
+                    
+                    
+                </tr>
+                
+            </tfoot>
+            <thead>
+                <tr>
+                    <th>Student Name </th>  
+                    <th>ID</th>  
+                    <th>GPA</th>  
+                    <th>Department</th>
+                    <th>Student Status</th> 
+                    <th>Edit Info</th>
+
+
+
+                </tr>
+
+                </thead>
+
+                <tbody div="container">
+                    {% for student in students%}
+                    {% if student.State == 'Active' or student.State == 'InActive' %}
+                    <tr class="table-row">
+                        <td class="name">{{student.name}}</td>
+                        <td class="id">{{student.student_id}}</td>
+                        <td class="gpa">{{student.GPA}}</td>
+                        <td class="depart">{{student.department}}</td>
+                       <td class="state">{{student.State}}
+                           <a  class="ok" title="Change State" onclick="change()"
+                        <a class="link" href="{% url 'change' student.student_id  %}"><b>Change</a></a></b></td> 
+                    
+                        <td class="edit"><a href="edit/{{student.student_id}} "class="btn"> Edit</a></td>
+                        {% endif %}
+                        {% endfor %}
+                        
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr><td>
+                        </td><td></td><td></td><td></td><td></td>
+                        <td>
+                            <div class="button">                    
+                                <input type="submit"name="btn" id ="btn" value="save" class="btn2" onclick="validate()">
+                                
+                            </div>                    
+                        </form>
+                        </td>
+                                                
+        </div>
+    </table>
+    
+                    {% include 'parts/footer.html' %}
+
+    </body>

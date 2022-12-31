@@ -1,0 +1,47 @@
+{% load static %}
+
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="uft-8">
+            <link rel="stylesheet" href="{% static 'css/HomeStyle.css'%}">
+            <title>Home</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">            
+        </head>
+            <header class="deisgn">
+                <img src="{% static 'images/logo.png'%}" alt="logo" class="logo" >
+                {% include 'parts/navHome.html' %}
+
+<body>
+        
+        <div class="content">
+            <div class="first">
+            <h2 class="note"> Student Review </h2 class="note">
+            <pre class="review">
+                    Elithbez Review About College :
+                    " The education is great, 
+                    but teaches a way of thinking
+                    rather than hard technical skills.
+                    There's a lot of flexibility in the program
+                    if you want to pursue technical or quantitative skills,
+                    but it is a huge pain to work around and figure out one's schedule."</pre class="review">
+            <img src="{% static 'images/girl.jpg'%}" alt="Elithbez Review" class="x">
+        
+            </div> 
+            <div class="second">
+                <pre id="review">
+
+                    Lionel Review About college :
+                    "College is important because in today's
+                    job market you can't expect a job that will offer good pay,
+                    advancement and freedom without at least a BA.
+                    College teaches you how to communicate, write and think."
+                </pre id ="review">
+                <img src="{% static 'images/boy.jpg'%}" alt="Lionel Review" class="y">
+            </div>
+        </div>
+        {% include 'parts/footer.html' %}
+
+</body>
+
+</html>

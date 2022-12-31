@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">            
+            </head>
+            <header class="deisgn">
+                <img src="{% static 'images/logo.png'%}" alt="logo" class="logo" >
+
+                <nav>
+                        <ul class="Nav">
+                            <li><a href="/"><i class="bi bi-house-fill"></i> Home</a></li>
+                            <li class="update">
+                                <li><a href="{%url 'add' %}"><i class="bi bi-person-plus"></i> Add</a></li>
+                            <li><a href="{%url 'all' %}"><i class="bi bi-file-earmark-person"></i> Student status</a></li>
+                            <li><a href="{%url 'department'%}"><i class="bi bi-person-lines-fill"></i> Select department</a></li>
+                         </ul>
+                </nav>
+                <form method="GET" action="{% url 'all' %}" class="form">
+                <div class="searchBox">
+                <input type="search" placeholder="Search.." name="search_name"  class="place">
+                <button class="srh" ><i class="bi bi-search"></i></button>
+                </div class="searchBox">
+            </form>
+                <a href="../Log_page/one.html" class="log"><button><i class="bi bi-person"></i> Log in</button></a>
+            </header class="deisgn">
+  </div>

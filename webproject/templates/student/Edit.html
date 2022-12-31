@@ -1,0 +1,99 @@
+{% load static %}
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="uft-8">
+            <link rel="stylesheet" href="{% static 'css/Edit.css'%}">
+            <script src="{% static 'js/edit.js'%}"></script>        
+            <title>Update Data</title>
+        </head>
+        <script>    
+            $(document).on('#h',"#h",function(e){
+                e.preventDefault();
+                $.ajax({
+                    type:'POST',
+                    url:'/edit',
+                    data:{
+                        name:$('#user').val(),
+                        id:$('#sid').val(),
+                        gpa:$('#sgpa').val(),
+                        level:$('#slevel').val(),
+                        birth:$('#sdate').val(),
+                        depart:$('#departments').val(),
+                        phonenumber:$('#sphone').val(),
+                        Gender:$('#Gender').val(),
+                        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                    },
+              
+                });
+              });
+            </script>
+
+            {% include 'parts/nav.html' %}
+    <body>
+        
+
+        <form name="myform" method="POST" action="{{student.student_id}}" id="h"  onsubmit = "return validate()">
+            {% csrf_token %}
+            
+            <div>
+                <label for="user"><b>Student name :</b></label>
+                <input type="text" name="name"  value="{{student.name}}" id="user"  >
+                
+            </div>
+            <div>
+
+                <label for="id"><b>Student ID :</b> </label>
+                
+                <input type="number" name="id" id="sid"  value="{{student.student_id}}" placeholder="" step="1">
+                
+            </div>
+            
+        <div>
+                <label for="level"><b>Student Level :</b> </label>
+
+                <input type="number" name="level" id="slevel"  value="{{student.level}}"  step="1" min="1" max="4">
+            </div>
+            <div>
+                <label for="gpa"><b>Student GPA :</b> </label>
+                <input type="number" name="gpa" id="sgpa"  value="{{student.GPA}}" step=".001" min="1" max="4">
+            </div>
+            <div>
+                <label for="birth"><b>Student Birth :</b> </label>
+                <input type="text" name="birth" id="sdate" value="{{student.birthday}}">
+            </div>
+            <div>
+                <label>Department :</label>
+                <input type="text" name="depart" id="departments" value="{{student.department}}"  readonly>
+            </div>
+            <div>
+                <label for="phone number"><b>Phone number :</b></label>
+                <input type="text" name="phonenumber" id="phone" value="{{student.phonenumber}}" >
+
+            </select>
+            <label for="Gender"><b> Gender :</b></label>
+
+            <select name="Gender" id="Gender">
+                <option>{{student.gender}}</option>
+                <option>Male</option>
+                <option>Female</option>
+</select>   
+
+        </div>
+        <div>
+            <label for="State"><b> State :</b></label>
+
+            <select name="select">
+                <option>{{student.State}}</option>
+                <option>Active</option>
+                <option>InActive</option>
+</select>   
+</div>
+                <input type="submit" name="btn" id="h"  value="update" onclick="updateData()" class="x">
+                <input type="submit"  name ="btn"  id="h" value="Delete" onclick="deleteData()" class="y">  
+            </form>
+                         
+        </body>
+        {% include 'parts/footer.html' %}
+    </body>    
+    </html>
