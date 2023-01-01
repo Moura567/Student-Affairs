@@ -20,3 +20,6 @@ with a related set of attributes only.
 the table viewing all students.
 8. Website should have a well designed navigation bar to go through all pages and
 a home page.
+<div id="m" align="center">
+<img src="https://komarev.com/ghpvc/?username=Moura567&style=flat-square&color=blue" alt="/">
+</div>
